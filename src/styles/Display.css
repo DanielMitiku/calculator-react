@@ -1,0 +1,15 @@
+#display {
+  display: flex;
+  background-color: grey;
+  height: 100px;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 1px;
+}
+
+#display p {
+  align-self: flex-end;
+  margin-left: auto;
+}
+

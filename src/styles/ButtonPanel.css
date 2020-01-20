@@ -1,0 +1,13 @@
+.group {
+  display: flex;
+  height: 100px;
+}
+
+Button {
+  width: 25%;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  justify-content: center;
+  border: 1px grey solid;
+}

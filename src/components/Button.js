@@ -4,14 +4,14 @@ class Button extends React.Component {
   render() {
     return (
       <button>
-        {this.props.button}
+        {this.props.buttonName}
       </button>
     );
   }
 }
 
 Button.propTypes = {
-  button: React.PropTypes.string.isRequired
+  buttonName: React.PropTypes.string.isRequired
 };
 
 export default Button;

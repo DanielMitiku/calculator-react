@@ -15,6 +15,18 @@ const calculate = ({ total, next, operation }, bName) => {
           next: '',
           operation: bName 
         }
+      } else if(bName === 'AC') {
+        return {
+          total: '0',
+          next: '',
+          operation: ''
+        }
+      } else if(bName === '%') {
+        return {
+          total: operate(total, 1, operation),
+          next: '',
+          operation: ''
+        }
       }
     }else {
       return {

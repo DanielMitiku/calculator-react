@@ -2,7 +2,7 @@
 
 > This is a simple calculator app done by using react. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![screenshot](./Capture.jpg)
+![screenshot](./Capture.JPG)
 
 ## Live Demo
 

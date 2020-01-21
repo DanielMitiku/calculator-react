@@ -2,6 +2,8 @@
 
 > This is a simple calculator app done by using react. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+![screenshot](./Capture.jpg)
+
 ## Live Demo
 
 - The live version of the app can be found [here](https://calculator-react-es6.herokuapp.com/)

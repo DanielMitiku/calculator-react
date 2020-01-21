@@ -80,3 +80,17 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 👤 **Daniel Mitiku**
 
 - Github: [@danielmitiku](https://github.com/DanielMitiku)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](lic.url) licensed.

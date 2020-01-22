@@ -17,20 +17,35 @@ const calculate = ({ total, next, operation }, bName) => {
         }
       } else if(bName === 'AC') {
         return {
-          total: '0',
+          total: '',
           next: '',
           operation: ''
         }
-      } else if(bName === '%') {
+      }else if(bName === '.') {
         return {
-          total: operate(total, 1, operation),
-          next: '',
-          operation: ''
+          total: total,
+          next: next + bName,
+          operation: operation
+        }
+      }else if(bName === '%') {
+        return {
+          total: operate(total, 1, '%'),
+          next: operate(total, 1, '%'),
+          operation: '%'
+        }
+      }else if(bName === '=') {
+        const result = operate(total, next, operation);
+        if(result) {
+          return {
+            total: result,
+            next: result,
+            operation: '='
+          }
         }
       }
     }else {
       return {
-        total: total + bName,
+        total: total,
         next: next + bName,
         operation: ''
       }

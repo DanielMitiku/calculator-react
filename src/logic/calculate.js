@@ -2,16 +2,31 @@ import operate from './operate';
 
 const calculate = ({ total, next, operation }, bName) => {
   if (total !== null && next !== null && operation !== null) {
-    if (Number.isNaN(bName)) {
+    const isNotNumber =  str => !str.match(/\d/);
+    if(total === 'Infinity') {
+      return {
+        total: '0',
+        next: '',
+        operation: '',
+      }
+    }
+    if (isNotNumber(bName)) {
       if (bName === '+/-') {
         return {
           total: parseFloat(total) ? (-1 * total).toString() : total,
           next: parseFloat(next) ? (-1 * next).toString() : next,
           operation: '',
         };
-      } if (bName === '+' || bName === '-' || bName === 'X' || bName === '÷') {
+      } if (bName === "+" || bName === "-" || bName === "X" || bName === "÷") {
+        if(next !== '' && total !== '' && operation !== '') {
+          return {
+            total: operate(total, next, operation),
+            next: '',
+            operation: bName,
+          };
+        }
         return {
-          total: next,
+          total: (next === '') ? total : next,
           next: '',
           operation: bName,
         };
@@ -24,13 +39,13 @@ const calculate = ({ total, next, operation }, bName) => {
       } if (bName === '.') {
         return {
           total,
-          next: next + bName,
+          next: next.match(/\./) ? next : next + bName,
           operation,
         };
       } if (bName === '%') {
         return {
-          total: operate(total, 1, '%'),
-          next: operate(total, 1, '%'),
+          total: parseFloat(total) ? operate(total, 1, '%') : total,
+          next: parseFloat(next) ? operate(next, 1, '%') : next,
           operation: '%',
         };
       } if (bName === '=') {
@@ -38,20 +53,28 @@ const calculate = ({ total, next, operation }, bName) => {
         if (result) {
           return {
             total: result,
-            next: result,
-            operation: '=',
+            next: '',
+            operation: '',
           };
         }
       }
     } else {
-      return {
-        total,
-        next: next + bName,
-        operation: '',
-      };
+      if(operation === '') {
+        return {
+          total,
+          next: next + bName,
+          operation,
+        };
+      } else {
+        return {
+          total,
+          next: next + bName,
+          operation,
+        };
+      }
     }
   }
-  return false;
+  return {total, next, operation};
 };
 
 export default calculate;

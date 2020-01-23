@@ -7,10 +7,8 @@ const Button = ({ buttonName, color, wide, clickHandler }) => {
     width: wide ? '50%' : '25%',
   };
 
-  const handleClick = (bName) => clickHandler(bName);
-
   return (
-    <button type="button" style={styles} onClick={this.handleClick}>
+    <button type="button" style={styles} onClick={() => clickHandler(buttonName)}>
       {buttonName}
     </button>
   );

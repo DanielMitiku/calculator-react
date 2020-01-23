@@ -8,9 +8,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      total: null,
-      next: null,
-      operation: null
+      total: '0',
+      next: '',
+      operation: ''
     }
     this.handleClick = this.handleClick.bind(this);
   }
@@ -21,10 +21,10 @@ class App extends React.Component {
   }
 
   render() {
-    const displayValue = (this.next === '') ? this.total : this.next;
+    const displayValue = (this.state.next === '') ? this.state.total : this.state.next;
     return (
       <div id="container">
-        <Display total={displayValue} />
+        <Display result={displayValue} />
         <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );

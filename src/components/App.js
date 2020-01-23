@@ -10,8 +10,8 @@ class App extends React.Component {
     this.state = {
       total: '0',
       next: '',
-      operation: ''
-    }
+      operation: '',
+    };
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -21,7 +21,12 @@ class App extends React.Component {
   }
 
   render() {
-    const displayValue = (this.state.next === '') ? this.state.total : this.state.next;
+    let { next: displayValue } = this.state;
+    if (displayValue === '') {
+      ({ total: displayValue } = this.state);
+    } else {
+      ({ next: displayValue } = this.state);
+    }
     return (
       <div id="container">
         <Display result={displayValue} />

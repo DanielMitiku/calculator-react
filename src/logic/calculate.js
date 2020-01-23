@@ -32,11 +32,18 @@ const calculate = ({ total, next, operation }, bName) => {
         };
       } if (bName === 'AC') {
         return {
-          total: '',
+          total: '0',
           next: '',
           operation: '',
         };
       } if (bName === '.') {
+        if(next === '') {
+          return {
+            total,
+            next: '0.',
+            operation,
+          }
+        }
         return {
           total,
           next: next.match(/\./) ? next : next + bName,

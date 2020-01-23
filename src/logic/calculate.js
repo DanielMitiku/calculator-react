@@ -2,7 +2,7 @@ import operate from './operate';
 
 const calculate = ({ total, next, operation }, bName) => {
   if (total !== null && next !== null && operation !== null) {
-    const isNotNumber = (str) => !str.match(/\d/);
+    const isNotNumber = str => !str.match(/\d/);
     if (total === 'Infinity') {
       return {
         total: '0',

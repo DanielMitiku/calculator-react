@@ -21,9 +21,10 @@ class App extends React.Component {
   }
 
   render() {
+    const displayValue = (this.next === '') ? this.total : this.next;
     return (
       <div id="container">
-        <Display total={this.state.total} />
+        <Display total={displayValue} />
         <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );

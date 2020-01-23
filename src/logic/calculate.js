@@ -37,12 +37,12 @@ const calculate = ({ total, next, operation }, bName) => {
           operation: '',
         };
       } if (bName === '.') {
-        if(next === '') {
+        if (next === '') {
           return {
             total,
             next: '0.',
             operation,
-          }
+          };
         }
         return {
           total,

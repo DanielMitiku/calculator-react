@@ -1,6 +1,6 @@
 # Calculator-React
 
-> This is a simple calculator app done by using react. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> This is a simple calculator app created with React. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ![screenshot](./Capture.JPG)
 
@@ -29,11 +29,21 @@ To get a local copy up and running follow these simple example steps.
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+## Current Features
+
+- Users can do basic calculations using the app
+
+## Features you can add
+
+- Update the UX and UI for better experience
+
 ## Author
 
 👤 **Daniel Mitiku**
 
-- Github: [@danielmitiku](https://github.com/DanielMitiku)
+- Github: [Daniel Mitiku](https://github.com/DanielMitiku)
+- LinkedIn: [@daniel-wesego](https://www.linkedin.com/in/daniel-wesego/)
+- Email: wedanielmitiku@gmail.com
 
 ## 🤝 Contributing
 
